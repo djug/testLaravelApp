@@ -25,6 +25,11 @@ class UserProfileController extends Controller
      */
     public function create()
     {
+        $user = Auth::user();
+        $profile = $user->profile;
+        if ($profile) {
+            return redirect()->route('profile.show');
+        }
         return view('profile.create');
     }
 

@@ -7,7 +7,7 @@ use App\User;
 
 class UserProfile extends Model
 {
-    protected $fillable = ['name', 'country', 'address'];
+    protected $fillable = ['name', 'country', 'address', 'user_id'];
 
     public function user()
     {
