@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use \Auth;
 use App\User;
 use App\UserProfile;
+use App\Http\Requests\StoreProfile;
 
 class UserProfileController extends Controller
 {
@@ -33,7 +34,7 @@ class UserProfileController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreProfile $request)
     {
         $data = $request->all();
         $userId = Auth::user()->id;

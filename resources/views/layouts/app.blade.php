@@ -83,7 +83,7 @@
                 </div>
             </div>
         </nav>
-
+        @include('layouts._errors')
         @yield('content')
     </div>
 
