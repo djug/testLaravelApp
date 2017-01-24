@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\TwitterAccount;
+user App\UserProfile;
 
 class User extends Authenticatable
 {
@@ -31,5 +32,10 @@ class User extends Authenticatable
     public function twitterAccount()
     {
         return $this->hasOne(TwitterAccount::class);
+    }
+
+    public function profile()
+    {
+        return $this->hasOne(UserProfile::class);
     }
 }
