@@ -42,6 +42,7 @@ class TwitterController extends Controller
                                     'oauth_token_secret' => $accessToken['oauth_token_secret'],
                                     'twitter_screen_name' => $accessToken['screen_name'],
                                 ]);
-        dd($twitterAccount);
+        
+        return redirect()->route('twitter');
     }
 }
