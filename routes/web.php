@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('twitter', ['as' => 'twitter', 'uses' => 'TwitterController@index']);
+Route::get('twitter/login', ['as' => 'twitter.login', 'uses' => 'TwitterController@getLogin']);
+Route::get('twitter/callback', ['as' => 'twitter.callback', 'uses' => 'TwitterController@getCallback']);
 
 Auth::routes();
 
