@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\TwitterAccount;
-user App\UserProfile;
+use App\UserProfile;
 
 class User extends Authenticatable
 {
