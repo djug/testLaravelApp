@@ -21,6 +21,25 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Twitter Profile</div>
+
+                <div class="panel-body">
+                    <ul>
+                         <li>name: {{$twitterProfile->name}}</li>
+                         <li>location: {{$twitterProfile->location}}</li>
+                         <li>description: {{$twitterProfile->description}}</li>
+                         <li># followers: {{$twitterProfile->followers_count}}</li>
+                         <li>following: {{$twitterProfile->friends_count}}</li>
+                         <li>member since: {{$twitterProfile->created_at}}</li>
+                         <li>favourites count: {{$twitterProfile->favourites_count}}</li>
+                         <li># tweets: {{$twitterProfile->statuses_count}}</li>
+
+                     </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection

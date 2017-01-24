@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use Abraham\TwitterOAuth\TwitterOAuth;
 use App\TwitterAccount;
+use App\Twitter;
 
 class TwitterController extends Controller
 {
@@ -13,7 +14,11 @@ class TwitterController extends Controller
     {
         $user = Auth::user();
         $twitterAccount = $user->TwitterAccount;
-        return view('twitter')->with(compact('twitterAccount'));
+
+        $twitter = new Twitter($user->id);
+        $twitterProfile = $twitter->getUserProfile();
+
+        return view('twitter')->with(compact('twitterAccount', 'twitterProfile'));
     }
 
     public function getLogin()
