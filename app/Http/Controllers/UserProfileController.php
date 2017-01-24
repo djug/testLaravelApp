@@ -15,6 +15,10 @@ class UserProfileController extends Controller
         $user = Auth::user();
         $profile = $user->profile;
 
+        if(! $profile) {
+            return redirect()->route('profile.create');
+        }
+
         return view('profile.show')->with(compact('profile'));
     }
 
