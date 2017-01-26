@@ -60,7 +60,7 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="{{ url('/twitter') }}">
+                                        <a href="{{ url('/twitter/login') }}">
                                             Twitter
                                         </a>
                                     </li>
